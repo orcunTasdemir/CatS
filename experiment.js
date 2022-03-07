@@ -173,6 +173,10 @@ var practice_timeline = {
   prompt:
   "<p>Which word you heard is more likely to be a word in Catalan?</p>",
   randomize_order: true,
+  // on_timeline_start: function(){
+  //   document.write('<html><body><h2>dfvnfdjvndfjvn</h2></body></html>');
+  //  return 0;
+  //}
 };
 
 //we push every variable onto the timeline variable we created above
