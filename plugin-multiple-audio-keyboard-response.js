@@ -51,6 +51,14 @@ var jsPsychMultipleAudioKeyboardResponse = (function (jspsych) {
     },
   };
 
+  function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+
   /**
    * **multiple-audio-keyboard-response**
    *
@@ -75,31 +83,52 @@ var jsPsychMultipleAudioKeyboardResponse = (function (jspsych) {
       };
       // record webaudio context start time
       var startTime;
-      // load audio file
+      // wait time between audios
+      var waitTime;
+
+      // load audio file 1
       this.jsPsych.pluginAPI
-        .getAudioBuffer(trial.stimulus)
+        .getAudioBuffer(trial.stimuli[0])
         .then((buffer) => {
           if (context !== null) {
-            this.audio = context.createBufferSource();
-            this.audio.buffer = buffer;
-            this.audio.connect(context.destination);
+            this.audio_1 = context.createBufferSource();
+            this.audio_1.buffer = buffer;
+            this.audio_1.connect(context.destination);
           } else {
-            this.audio = buffer;
-            this.audio.currentTime = 0;
+            this.audio_1 = buffer;
+            this.audio_1.currentTime = 0;
           }
           setupTrial();
         })
         .catch((err) => {
           console.error(
-            `Failed to load audio file "${trial.stimulus}". Try checking the file path. We recommend using the preload plugin to load audio files.`
+            `Failed to load audio file 1 "${trial.stimuli[0]}". Try checking the file path. We recommend using the preload plugin to load audio files.`
           );
           console.error(err);
         });
+
+      // load audio file 2
+      this.jsPsych.pluginAPI
+        .getAudioBuffer(trial.stimuli[1])
+        .then((buffer) => {
+          if (context !== null) {
+            this.audio_2 = context.createBufferSource();
+            this.audio_2.buffer = buffer;
+            this.audio_2.connect(context.destination);
+          } else {
+            this.audio_2 = buffer;
+            this.audio_2.currentTime = 0;
+          }
+          setupTrial();
+        })
+        .catch((err) => {
+          console.error(
+            `Failed to load audio file 2 "${trial.stimuli[1]}". Try checking the file path. We recommend using the preload plugin to load audio files.`
+          );
+          console.error(err);
+        });
+
       const setupTrial = () => {
-        // set up end event if trial needs it
-        if (trial.trial_ends_after_audio) {
-          this.audio.addEventListener("ended", end_trial);
-        }
         // show prompt if there is one
         if (trial.prompt !== null) {
           display_element.innerHTML = trial.prompt;
@@ -107,21 +136,16 @@ var jsPsychMultipleAudioKeyboardResponse = (function (jspsych) {
         // start audio
         if (context !== null) {
           startTime = context.currentTime;
-          this.audio.start(startTime);
+          this.audio_1.start(startTime);
+          sleep(gap_duration);
+          startTime = context.currentTime;
+          this.audio_2.start(startTime);
         } else {
-          this.audio.play();
+          this.audio_1.play();
         }
-        // start keyboard listener when trial starts or sound ends
-        if (trial.response_allowed_while_playing) {
+        // start keyboard listener when trial starts
+        if (true) {
           setup_keyboard_listener();
-        } else if (!trial.trial_ends_after_audio) {
-          this.audio.addEventListener("ended", setup_keyboard_listener);
-        }
-        // end trial if time limit is set
-        if (trial.trial_duration !== null) {
-          this.jsPsych.pluginAPI.setTimeout(() => {
-            end_trial();
-          }, trial.trial_duration);
         }
         on_load();
       };
