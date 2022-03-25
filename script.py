@@ -1,15 +1,17 @@
 import os
 
+all_n = []
 
-os.chdir("data/audio/list_1");
 
-print("\nHERE:" + os.getcwd());
+for i in range(1,5):
+    
+    os.chdir("/Users/orcuntasdemir/Desktop/CatS/data/audio/list_{}".format(i));
 
-all_filenames = []
+    for filename in os.listdir(os.getcwd()):
+        if filename not in all_n:
+            all_n.append("data/audio/list_{}/".format(i) + filename);
 
-for filename in os.listdir(os.getcwd()):
-    all_filenames.append("data/audio/list_1/" + filename);
-   
 
-print(all_filenames);
+print(all_n);
+
 

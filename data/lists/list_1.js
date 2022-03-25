@@ -1,4 +1,4 @@
-var experiment_stimuli = 
+var list_1 = 
 [
     {
       "": 1,
