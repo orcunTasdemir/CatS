@@ -40,9 +40,12 @@ var audio_from_list = [
   "data/audio/list_1/seRO1ba_SE1roba.mp3",
 ];
 
+//All audio so we can preload them
 audio = practice_audio.concat(audio_from_list);
 
-console.log(audio);
+
+//Randomize the list being used
+
 
 //Global variables will go here
 var N_PRACTICE_QUESTIONS = 2;
@@ -270,7 +273,7 @@ timeline.push(experiment_timeline);
 // //we push this whole ting onto the timeline
 // timeline.push(test_procedure);
 
-/*var save_server_data = {
+var save_server_data = {
     type: jsPsychCallFunction,
     func: function() {
         var data = jsPsych.data.get().json();
@@ -284,7 +287,7 @@ timeline.push(experiment_timeline);
     post_trial_gap: 1000
 }
 
-timeline.push(save_server_data);*/
+timeline.push(save_server_data);
 
 //at the end of it all we run the timeline with jsPsych
 jsPsych.run(timeline);
