@@ -21,7 +21,7 @@ var list_3 =
       "Audio_2_name": "paLO1ca",
       "Audio_full": "paLON1ca_paLO1ca",
       "Extension": ".mp3",
-      "Audio_full_ext": "paLON1ca_paLO1ca.mp3"
+      "Audio_full_ext": "data/audio/list_3/paLON1ca_paLO1ca.mp3"
     },
     {
       "": 6,
@@ -44,7 +44,7 @@ var list_3 =
       "Audio_2_name": "BA1sserpa",
       "Audio_full": "baSSER1pa_BA1sserpa",
       "Extension": ".mp3",
-      "Audio_full_ext": "baSSER1pa_BA1sserpa.mp3"
+      "Audio_full_ext": "data/audio/list_3/baSSER1pa_BA1sserpa.mp3"
     },
     {
       "": 9,
@@ -67,7 +67,7 @@ var list_3 =
       "Audio_2_name": "LLI1pata",
       "Audio_full": "lliPA1ta_LLI1pata",
       "Extension": ".mp3",
-      "Audio_full_ext": "lliPA1ta_LLI1pata.mp3"
+      "Audio_full_ext": "data/audio/list_3/lliPA1ta_LLI1pata.mp3"
     },
     {
       "": 16,
@@ -90,7 +90,7 @@ var list_3 =
       "Audio_2_name": "DE1topa",
       "Audio_full": "DE1tospa_DE1topa",
       "Extension": ".mp3",
-      "Audio_full_ext": "DE1tospa_DE1topa.mp3"
+      "Audio_full_ext": "data/audio/list_3/DE1tospa_DE1topa.mp3"
     },
     {
       "": 19,
@@ -113,7 +113,7 @@ var list_3 =
       "Audio_2_name": "kuFO1da",
       "Audio_full": "kuFON1da_kuFO1da",
       "Extension": ".mp3",
-      "Audio_full_ext": "kuFON1da_kuFO1da.mp3"
+      "Audio_full_ext": "data/audio/list_3/kuFON1da_kuFO1da.mp3"
     },
     {
       "": 22,
@@ -136,7 +136,7 @@ var list_3 =
       "Audio_2_name": "GO1pirda",
       "Audio_full": "goPIR1da_GO1pirda",
       "Extension": ".mp3",
-      "Audio_full_ext": "goPIR1da_GO1pirda.mp3"
+      "Audio_full_ext": "data/audio/list_3/goPIR1da_GO1pirda.mp3"
     },
     {
       "": 25,
@@ -159,7 +159,7 @@ var list_3 =
       "Audio_2_name": "FI1teba",
       "Audio_full": "fiTE1ba_FI1teba",
       "Extension": ".mp3",
-      "Audio_full_ext": "fiTE1ba_FI1teba.mp3"
+      "Audio_full_ext": "data/audio/list_3/fiTE1ba_FI1teba.mp3"
     },
     {
       "": 32,
@@ -182,7 +182,7 @@ var list_3 =
       "Audio_2_name": "XU1niga",
       "Audio_full": "XU1nisga_XU1niga",
       "Extension": ".mp3",
-      "Audio_full_ext": "XU1nisga_XU1niga.mp3"
+      "Audio_full_ext": "data/audio/list_3/XU1nisga_XU1niga.mp3"
     },
     {
       "": 35,
@@ -205,7 +205,7 @@ var list_3 =
       "Audio_2_name": "seRO1ba",
       "Audio_full": "seROM1ba_seRO1ba",
       "Extension": ".mp3",
-      "Audio_full_ext": "seROM1ba_seRO1ba.mp3"
+      "Audio_full_ext": "data/audio/list_3/seROM1ba_seRO1ba.mp3"
     },
     {
       "": 38,
@@ -228,7 +228,7 @@ var list_3 =
       "Audio_2_name": "NU1farba",
       "Audio_full": "nuFAR1ba_NU1farba",
       "Extension": ".mp3",
-      "Audio_full_ext": "nuFAR1ba_NU1farba.mp3"
+      "Audio_full_ext": "data/audio/list_3/nuFAR1ba_NU1farba.mp3"
     },
     {
       "": 41,
@@ -251,7 +251,7 @@ var list_3 =
       "Audio_2_name": "JA1rata",
       "Audio_full": "jaRA1ta_JA1rata",
       "Extension": ".mp3",
-      "Audio_full_ext": "jaRA1ta_JA1rata.mp3"
+      "Audio_full_ext": "data/audio/list_3/jaRA1ta_JA1rata.mp3"
     },
     {
       "": 48,
@@ -274,7 +274,7 @@ var list_3 =
       "Audio_2_name": "MO1leda",
       "Audio_full": "MO1lesda_MO1leda",
       "Extension": ".mp3",
-      "Audio_full_ext": "MO1lesda_MO1leda.mp3"
+      "Audio_full_ext": "data/audio/list_3/MO1lesda_MO1leda.mp3"
     },
     {
       "": 51,
@@ -297,7 +297,7 @@ var list_3 =
       "Audio_2_name": "teLU1ca",
       "Audio_full": "teLUN1ca_teLU1ca",
       "Extension": ".mp3",
-      "Audio_full_ext": "teLUN1ca_teLU1ca.mp3"
+      "Audio_full_ext": "data/audio/list_3/teLUN1ca_teLU1ca.mp3"
     },
     {
       "": 54,
@@ -320,7 +320,7 @@ var list_3 =
       "Audio_2_name": "LA1derca",
       "Audio_full": "laDER1ca_LA1derca",
       "Extension": ".mp3",
-      "Audio_full_ext": "laDER1ca_LA1derca.mp3"
+      "Audio_full_ext": "data/audio/list_3/laDER1ca_LA1derca.mp3"
     },
     {
       "": 57,
@@ -343,7 +343,7 @@ var list_3 =
       "Audio_2_name": "XI1pega",
       "Audio_full": "xiPE1ga_XI1pega",
       "Extension": ".mp3",
-      "Audio_full_ext": "xiPE1ga_XI1pega.mp3"
+      "Audio_full_ext": "data/audio/list_3/xiPE1ga_XI1pega.mp3"
     },
     {
       "": 64,
@@ -366,7 +366,7 @@ var list_3 =
       "Audio_2_name": "RO1taga",
       "Audio_full": "RO1tasga_RO1taga",
       "Extension": ".mp3",
-      "Audio_full_ext": "RO1tasga_RO1taga.mp3"
+      "Audio_full_ext": "data/audio/list_3/RO1tasga_RO1taga.mp3"
     },
     {
       "": 67,
@@ -389,7 +389,7 @@ var list_3 =
       "Audio_2_name": "PO1cu",
       "Audio_full": "PO1cut_PO1cu",
       "Extension": ".mp3",
-      "Audio_full_ext": "PO1cut_PO1cu.mp3"
+      "Audio_full_ext": "data/audio/list_3/PO1cut_PO1cu.mp3"
     },
     {
       "": 70,
@@ -412,7 +412,7 @@ var list_3 =
       "Audio_2_name": "biCAL1",
       "Audio_full": "BI1cal_biCAL1",
       "Extension": ".mp3",
-      "Audio_full_ext": "BI1cal_biCAL1.mp3"
+      "Audio_full_ext": "data/audio/list_3/BI1cal_biCAL1.mp3"
     },
     {
       "": 73,
@@ -435,7 +435,7 @@ var list_3 =
       "Audio_2_name": "tiDU1",
       "Audio_full": "TI1du_tiDU1",
       "Extension": ".mp3",
-      "Audio_full_ext": "TI1du_tiDU1.mp3"
+      "Audio_full_ext": "data/audio/list_3/TI1du_tiDU1.mp3"
     },
     {
       "": 80,
@@ -458,7 +458,7 @@ var list_3 =
       "Audio_2_name": "caFO1",
       "Audio_full": "caFOL1_caFO1",
       "Extension": ".mp3",
-      "Audio_full_ext": "caFOL1_caFO1.mp3"
+      "Audio_full_ext": "data/audio/list_3/caFOL1_caFO1.mp3"
     },
     {
       "": 83,
@@ -481,7 +481,7 @@ var list_3 =
       "Audio_2_name": "DA1ti",
       "Audio_full": "DA1tit_DA1ti",
       "Extension": ".mp3",
-      "Audio_full_ext": "DA1tit_DA1ti.mp3"
+      "Audio_full_ext": "data/audio/list_3/DA1tit_DA1ti.mp3"
     },
     {
       "": 86,
@@ -504,7 +504,7 @@ var list_3 =
       "Audio_2_name": "guiTOL1",
       "Audio_full": "GUI1tol_guiTOL1",
       "Extension": ".mp3",
-      "Audio_full_ext": "GUI1tol_guiTOL1.mp3"
+      "Audio_full_ext": "data/audio/list_3/GUI1tol_guiTOL1.mp3"
     },
     {
       "": 89,
@@ -527,7 +527,7 @@ var list_3 =
       "Audio_2_name": "jeTI1",
       "Audio_full": "JE1ti_jeTI1",
       "Extension": ".mp3",
-      "Audio_full_ext": "JE1ti_jeTI1.mp3"
+      "Audio_full_ext": "data/audio/list_3/JE1ti_jeTI1.mp3"
     },
     {
       "": 96,
@@ -550,7 +550,7 @@ var list_3 =
       "Audio_2_name": "xeCO1",
       "Audio_full": "xeCOL1_xeCO1",
       "Extension": ".mp3",
-      "Audio_full_ext": "xeCOL1_xeCO1.mp3"
+      "Audio_full_ext": "data/audio/list_3/xeCOL1_xeCO1.mp3"
     },
     {
       "": 99,
@@ -573,7 +573,7 @@ var list_3 =
       "Audio_2_name": "SI1bu",
       "Audio_full": "SI1but_SI1bu",
       "Extension": ".mp3",
-      "Audio_full_ext": "SI1but_SI1bu.mp3"
+      "Audio_full_ext": "data/audio/list_3/SI1but_SI1bu.mp3"
     },
     {
       "": 102,
@@ -596,7 +596,7 @@ var list_3 =
       "Audio_2_name": "xeGUL1",
       "Audio_full": "XE1gul_xeGUL1",
       "Extension": ".mp3",
-      "Audio_full_ext": "XE1gul_xeGUL1.mp3"
+      "Audio_full_ext": "data/audio/list_3/XE1gul_xeGUL1.mp3"
     },
     {
       "": 105,
@@ -619,7 +619,7 @@ var list_3 =
       "Audio_2_name": "nuPI1",
       "Audio_full": "NU1pi_nuPI1",
       "Extension": ".mp3",
-      "Audio_full_ext": "NU1pi_nuPI1.mp3"
+      "Audio_full_ext": "data/audio/list_3/NU1pi_nuPI1.mp3"
     },
     {
       "": 112,
@@ -642,7 +642,7 @@ var list_3 =
       "Audio_2_name": "miTO1",
       "Audio_full": "miTOL1_miTO1",
       "Extension": ".mp3",
-      "Audio_full_ext": "miTOL1_miTO1.mp3"
+      "Audio_full_ext": "data/audio/list_3/miTOL1_miTO1.mp3"
     },
     {
       "": 115,
@@ -665,7 +665,7 @@ var list_3 =
       "Audio_2_name": "FE1ca",
       "Audio_full": "FE1cat_FE1ca",
       "Extension": ".mp3",
-      "Audio_full_ext": "FE1cat_FE1ca.mp3"
+      "Audio_full_ext": "data/audio/list_3/FE1cat_FE1ca.mp3"
     },
     {
       "": 118,
@@ -688,7 +688,7 @@ var list_3 =
       "Audio_2_name": "luDIL1",
       "Audio_full": "LU1dil_luDIL1",
       "Extension": ".mp3",
-      "Audio_full_ext": "LU1dil_luDIL1.mp3"
+      "Audio_full_ext": "data/audio/list_3/LU1dil_luDIL1.mp3"
     },
     {
       "": 121,
@@ -711,7 +711,7 @@ var list_3 =
       "Audio_2_name": "lliFO1",
       "Audio_full": "LLI1fo_lliFO1",
       "Extension": ".mp3",
-      "Audio_full_ext": "LLI1fo_lliFO1.mp3"
+      "Audio_full_ext": "data/audio/list_3/LLI1fo_lliFO1.mp3"
     },
     {
       "": 128,
@@ -734,6 +734,6 @@ var list_3 =
       "Audio_2_name": "riGU1",
       "Audio_full": "riGUL1_riGU1",
       "Extension": ".mp3",
-      "Audio_full_ext": "riGUL1_riGU1.mp3"
+      "Audio_full_ext": "data/audio/list_3/riGUL1_riGU1.mp3"
     }
   ]
