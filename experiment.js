@@ -1,11 +1,19 @@
+//Function to save data
+function saveData(name, data) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "write_data.php"); // 'write_data.php' is the path to the php file described above.
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(JSON.stringify({ filedata: data }));
+}
+
+//we need to manually preload all the audio
+//to generate the audio file names, use the python script in the folder
 var practice_audio = [
   "data/audio/practice/xuNIS1ga_XU1nisga.mp3",
   "data/audio/practice/paLO1ca_PA1loca.mp3",
   "data/audio/practice/teLU1ca_TE1luca.mp3",
 ];
-//we need to manually preload all the audio
-//to generate the audio file names, use the python script in the folder
-var audio_from_list = [
+var audio_list_1 = [
   "data/audio/list_1/FE1ca_feCA1.mp3",
   "data/audio/list_1/roTAS1ga_RO1tasga.mp3",
   "data/audio/list_1/GO1pirda_GO1pida.mp3",
@@ -38,6 +46,8 @@ var audio_from_list = [
   "data/audio/list_1/xiPEL1ga_xiPE1ga.mp3",
   "data/audio/list_1/biCAL1_biCA1.mp3",
   "data/audio/list_1/moLES1da_MO1lesda.mp3",
+];
+var audio_list_2 = [
   "data/audio/list_2/SE1romba_seROM1ba.mp3",
   "data/audio/list_2/FI1teba_FI1telba.mp3",
   "data/audio/list_2/NU1faba_nuFA1ba.mp3",
@@ -70,6 +80,8 @@ var audio_from_list = [
   "data/audio/list_2/tiDU1_tiDUT1.mp3",
   "data/audio/list_2/poCUT1_PO1cut.mp3",
   "data/audio/list_2/jeTI1_jeTIT1.mp3",
+];
+var audio_list_3 = [
   "data/audio/list_3/LLI1fo_lliFO1.mp3",
   "data/audio/list_3/xeCOL1_xeCO1.mp3",
   "data/audio/list_3/SI1but_SI1bu.mp3",
@@ -102,6 +114,8 @@ var audio_from_list = [
   "data/audio/list_3/XU1nisga_XU1niga.mp3",
   "data/audio/list_3/XE1gul_xeGUL1.mp3",
   "data/audio/list_3/fiTE1ba_FI1teba.mp3",
+];
+var audio_list_4 = [
   "data/audio/list_4/caFO1_CA1fo.mp3",
   "data/audio/list_4/GUI1to_GUI1tol.mp3",
   "data/audio/list_4/DE1topa_deTO1pa.mp3",
@@ -136,14 +150,17 @@ var audio_from_list = [
   "data/audio/list_4/baSSE1pa_baSSER1pa.mp3",
 ];
 
-//All audio so we can preload them
-audio = practice_audio.concat(audio_from_list);
+//All audio
+all_audio = [audio_list_1, audio_list_2, audio_list_3, audio_list_4]
 
 //Randomize the list being used
 var test_stimuli = [list_1, list_2, list_3, list_4];
 
 //from 0 to 3
 selectedList = Math.floor(Math.random() * 4);
+
+//All audio to reload
+audio = practice_audio.concat(all_audio[selectedList]);
 
 //a 3 digit number
 subject_id = Math.floor(Math.random() * 900) + 100;
@@ -185,8 +202,7 @@ var jsPsych = initJsPsych({
   //I want to see how the data looks like when the experiment is over
   //so I include this function to see the data "on_finish", it will be commented out for the real experiment
   on_finish: function () {
-    //we can display the data when we want to
-    //jsPsych.data.displayData();
+    saveData(jsPsych.data.get().csv());
   },
 });
 
@@ -394,20 +410,25 @@ timeline.push(experiment_timeline);
 // //we push this whole ting onto the timeline
 // timeline.push(test_procedure);
 
-var save_server_data = {
+var wait_save = {
   type: jsPsychCallFunction,
-  func: function () {
-    var data = jsPsych.data.get().json();
-
-    fs.writeFile("file.json", JSON.stringify(data), function (err) {
-      if (err) throw err;
-      console.log("complete");
-    });
+  async: true,
+  func: function (done) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "write_data.php");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onload = function () {
+      if (xhr.status == 200) {
+        var response = JSON.parse(xhr.responseText);
+        console.log(response.success);
+      }
+      done(); // invoking done() causes experiment to progress to next trial.
+    };
+    xhr.send(jsPsych.data.get().json());
   },
-  post_trial_gap: 1000,
 };
 
-timeline.push(save_server_data);
+timeline.push(wait_save);
 
 //at the end of it all we run the timeline with jsPsych
 jsPsych.run(timeline);
