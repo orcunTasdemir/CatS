@@ -365,15 +365,19 @@ var experiment_starting = {
 var experiment = {
   type: jsPsychAudioKeyboardResponse,
   stimulus: jsPsych.timelineVariable("Audio_full_ext"),
-  choices: ["ArrowLeft", "ArrowRight"],
+  choices: ["f", "j"],
   post_trial_gap: rounds_gap,
   response_allowed_while_playing: false,
+  prompt: "<p>Which word you heard is more likely to be a word in Catalan?</p>",
 };
 
+var prompt = {
+  type: js
+}
+
 var experiment_timeline = {
-  timeline: [experiment],
+  timeline: [experiment, prompt],
   timeline_variables: test_stimuli[selectedList],
-  prompt: "<p>Which word you heard is more likely to be a word in Catalan?</p>",
   randomize_order: true,
   // on_timeline_start: function(){
   //   document.write('<html><body><h2>dfvnfdjvndfjvn</h2></body></html>');
