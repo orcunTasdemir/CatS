@@ -319,7 +319,7 @@ var practice_instructions = {
 var practice = {
   type: jsPsychAudioKeyboardResponse,
   stimulus: jsPsych.timelineVariable("Audio"),
-  choices: ["ArrowLeft", "ArrowRight"],
+  choices: ["f", "j"],
   post_trial_gap: rounds_gap,
   prompt: "<p>Which word you heard is more likely to be a word in Catalan?</p>",
   response_allowed_while_playing: false,
