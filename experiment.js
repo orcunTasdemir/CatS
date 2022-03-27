@@ -1,8 +1,12 @@
 //Function to save data
-function saveData(name, data) {
+function saveData(data) {
+  console.log("1");
   var xhr = new XMLHttpRequest();
+  console.log("2");
   xhr.open("POST", "write_data.php"); // 'write_data.php' is the path to the php file described above.
+  console.log("3");
   xhr.setRequestHeader("Content-Type", "application/json");
+  console.log(xhr);
   xhr.send(JSON.stringify({ filedata: data }));
 }
 
@@ -151,7 +155,7 @@ var audio_list_4 = [
 ];
 
 //All audio
-all_audio = [audio_list_1, audio_list_2, audio_list_3, audio_list_4]
+all_audio = [audio_list_1, audio_list_2, audio_list_3, audio_list_4];
 
 //Randomize the list being used
 var test_stimuli = [list_1, list_2, list_3, list_4];
@@ -319,10 +323,25 @@ var practice_instructions = {
 var practice = {
   type: jsPsychAudioKeyboardResponse,
   stimulus: jsPsych.timelineVariable("Audio"),
+  choices: "NO_KEYS",
+  prompt: function () {
+    if (jsPsych.timelineVariable("Gender") == "m") {
+      console.log(jsPsych.timelineVariable("Gender"));
+    } else {
+      console.log(jsPsych.timelineVariable("Gender"));
+    }
+  },
+  trial_ends_after_audio: true,
+  post_trial_gap: 1000,
+};
+
+//add prompt
+var practice_answer = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus:
+    "<p>Which word you heard is more likely to be a word in Catalan?</p>",
   choices: ["f", "j"],
   post_trial_gap: rounds_gap,
-  prompt: "<p>Which word you heard is more likely to be a word in Catalan?</p>",
-  response_allowed_while_playing: false,
 };
 
 var ask_to_repeat = {
@@ -336,8 +355,9 @@ var ask_to_repeat = {
 };
 
 var practice_timeline = {
-  timeline: [practice],
+  timeline: [practice, practice_answer],
   timeline_variables: practice_stimuli,
+  randomize_order: true,
   // on_timeline_start: function(){
   //   document.write('<html><body><h2>dfvnfdjvndfjvn</h2></body></html>');
   //  return 0;
@@ -365,18 +385,31 @@ var experiment_starting = {
 var experiment = {
   type: jsPsychAudioKeyboardResponse,
   stimulus: jsPsych.timelineVariable("Audio_full_ext"),
-  choices: ["f", "j"],
-  post_trial_gap: rounds_gap,
-  response_allowed_while_playing: false,
-  prompt: "<p>Which word you heard is more likely to be a word in Catalan?</p>",
+  choices: "NO_KEYS",
+  prompt: function () {
+    if (jsPsych.timelineVariable("Gender") == "m") {
+      console.log(jsPsych.timelineVariable("Gender"));
+      return "<p style='font-size:8em'>El/Un ...</p>";
+    } else {
+      console.log(jsPsych.timelineVariable("Gender"));
+      return "<p style='font-size:8em'>La/Una ...</p>";
+    }
+  },
+  trial_ends_after_audio: true,
+  post_trial_gap: 1000,
 };
 
-var prompt = {
-  type: js
-}
+//add prompt
+var answer = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus:
+    "<p>Which word you heard is more likely to be a word in Catalan?</p>",
+  choices: ["f", "j"],
+  post_trial_gap: rounds_gap,
+};
 
 var experiment_timeline = {
-  timeline: [experiment, prompt],
+  timeline: [experiment, answer],
   timeline_variables: test_stimuli[selectedList],
   randomize_order: true,
   // on_timeline_start: function(){
@@ -413,26 +446,6 @@ timeline.push(experiment_timeline);
 // }
 // //we push this whole ting onto the timeline
 // timeline.push(test_procedure);
-
-var wait_save = {
-  type: jsPsychCallFunction,
-  async: true,
-  func: function (done) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "write_data.php");
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onload = function () {
-      if (xhr.status == 200) {
-        var response = JSON.parse(xhr.responseText);
-        console.log(response.success);
-      }
-      done(); // invoking done() causes experiment to progress to next trial.
-    };
-    xhr.send(jsPsych.data.get().json());
-  },
-};
-
-timeline.push(wait_save);
 
 //at the end of it all we run the timeline with jsPsych
 jsPsych.run(timeline);
