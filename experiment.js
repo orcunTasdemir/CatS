@@ -412,7 +412,7 @@ var answer = {
 
 var experiment_timeline = {
   timeline: [experiment, answer],
-  timeline_variables: test_stimuli[selectedList].slice(0,1),
+  timeline_variables: test_stimuli[selectedList],
   randomize_order: true,
   // on_timeline_start: function(){
   //   document.write('<html><body><h2>dfvnfdjvndfjvn</h2></body></html>');
