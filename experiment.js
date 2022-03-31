@@ -389,10 +389,10 @@ var experiment = {
   prompt: function () {
     if (jsPsych.timelineVariable("Gender") == "m") {
       console.log(jsPsych.timelineVariable("Gender"));
-      return "<p style='font-size:8em'>El/Un ...</p>";
+      return "<p style='font-size:5em'>El/Un ...</p>";
     } else {
       console.log(jsPsych.timelineVariable("Gender"));
-      return "<p style='font-size:8em'>La/Una ...</p>";
+      return "<p style='font-size:5em'>La/Una ...</p>";
     }
   },
   trial_ends_after_audio: true,
@@ -410,7 +410,7 @@ var answer = {
 
 var experiment_timeline = {
   timeline: [experiment, answer],
-  timeline_variables: test_stimuli[selectedList],
+  timeline_variables: test_stimuli[selectedList].slice(0,1),
   randomize_order: true,
   // on_timeline_start: function(){
   //   document.write('<html><body><h2>dfvnfdjvndfjvn</h2></body></html>');
