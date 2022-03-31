@@ -327,8 +327,10 @@ var practice = {
   prompt: function () {
     if (jsPsych.timelineVariable("Gender") == "m") {
       console.log(jsPsych.timelineVariable("Gender"));
+      return "<p style='font-size:5em'>El/Un ...</p>";
     } else {
       console.log(jsPsych.timelineVariable("Gender"));
+      return "<p style='font-size:5em'>La/Una ...</p>";
     }
   },
   trial_ends_after_audio: true,
