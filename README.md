@@ -4,7 +4,8 @@
 Experiment built using the <a href="https://www.jspsych.org/7.2/">jsPsych</a> javascript library developed for online psychological experimentation. This experiment was commissioned by Scott Perry a PHD candidate at University of Alberta as aid for his linguistics research.
 
 
+https://user-images.githubusercontent.com/54958913/161648408-2f24dab0-3fd1-4d97-bc76-671788bc7878.mp4
 
-https://user-images.githubusercontent.com/54958913/161648341-1c6481e6-a667-4fdc-b8b2-711640324985.mp4
+
 
 
