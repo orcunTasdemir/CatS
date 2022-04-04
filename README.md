@@ -1,7 +1,7 @@
 # CatS : Linguistics Experiment exploring the Natural word formation in Catalan language
 
 <video width="400" controls Autoplay=autoplay>
-  <source src="D:/screenRecording.mov" type="video/mp4">
+  <source src="screenRecording.mp4" type="video/mp4">
 </video>
 <img src="https://www.jspsych.org/7.2/img/jspsych-logo.jpg" width=300 align="left"></img>
  
